@@ -1,1 +1,1 @@
-# Smart-Attendance-Calculator
+# duplicate error attendance file

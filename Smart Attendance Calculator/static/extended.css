@@ -1,0 +1,199 @@
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:url("/static/backgroundimage2.png") no-repeat center center fixed;
+background-size:cover;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+width:420px;
+padding:35px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+text-align:center;
+color:white;
+}
+
+h1{
+margin-bottom:25px;
+color:darkblue;
+}
+
+.input-group{
+margin-bottom:18px;
+text-align:left;
+color: black;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:6px;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:12px;
+background: linear-gradient(45deg,#ff416c,#ff4b2b);
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+margin-top:10px;
+transition: all 0.3s ease;
+}
+
+button:hover{
+background: linear-gradient(45deg,#990727,#22c55e);
+transform: translateY(-3px);
+}
+
+.result{
+margin-top:20px;
+padding:15px;
+background:rgba(6, 219, 226, 0.066);
+border-radius:10px;
+}
+
+.progress{
+width:100%;
+height:20px;
+background:#ee0606;
+border-radius:10px;
+margin-top:10px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:20px;
+background:#22c55e;
+transition: width 0.6s ease-in-out;
+}
+
+.footer{
+margin-top:20px;
+font-size:15px;
+color: chocolate;
+}
+
+.center{
+margin-top:10px;
+font-size:14px;
+color: #ef4444;
+}
+
+button{
+width:100%;
+padding:14px;
+background: linear-gradient(45deg,#ff416c,#ff4b2b);
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+margin-top:15px;
+transition: all 0.3s ease;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+position:relative;
+overflow:hidden;
+}
+
+/* 🔥 Hover Glow */
+button:hover{
+background: linear-gradient(45deg,#22c55e,#4ade80);
+transform: translateY(-3px);
+box-shadow:0 0 15px #22c55e, 0 0 30px #22c55e;
+}
+
+/* 👆 Click Effect */
+button:active{
+transform: scale(0.96);
+}
+
+/* 🎯 Focus Highlight */
+button:focus{
+outline:none;
+box-shadow:0 0 10px #fff, 0 0 25px #22c55e;
+}
+
+/* ✨ Shine Animation */
+button::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+transition:0.5s;
+}
+
+button:hover::before{
+left:100%;
+}
+.success{
+color:#0b18d1;
+background: rgba(34,197,94,0.15);
+padding:12px;
+border-radius:8px;
+border-left:5px solid #22c55e;
+}
+
+.warning{
+color:#f80505;
+background: rgba(239,68,68,0.15);
+padding:12px;
+border-radius:8px;
+border-left:5px solid #ef4444;
+}
+
+.glow-text{
+font-size:15px;
+color:#dd0404;
+text-align:center;
+margin-top:10px;
+animation: glow 1.5s infinite alternate;
+}
+
+/* 🔥 Glow Animation */
+@keyframes glow{
+0%{
+    text-shadow: 0 0 5px #e911f9,
+                 0 0 10px #e62955;
+}
+100%{
+    text-shadow: 0 0 15px #08923f,
+                 0 0 25px #00e5ff;
+}
+}
+
+.logo{
+display:flex;
+justify-content:center;
+margin-bottom:10px;
+}
+
+.logo img{
+width:8px;
+height:0px;
+object-fit:contain;
+filter: drop-shadow(0 0 10px #00e5ff);
+}

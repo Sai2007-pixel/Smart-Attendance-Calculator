@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Attendance Calculator</title>
+<link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='extended.css') }}">
+
+</head>
+
+<body>
+
+<!-- <div class="logo">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
+</div> -->
+
+<div class="container">
+
+<h1>📊 Smart Attendance Calculator</h1>
+
+<form method="POST">
+
+<div class="input-group">
+<label>Total Classes</label>
+<input type="number" name="total" placeholder="Enter total classes" required>
+</div>
+
+<div class="input-group">
+<label>Classes Attended</label>
+<input type="number" name="attended" placeholder="Enter attended classes" required>
+</div>
+
+<div class="input-group">
+<label>NA Classes</label>
+<input type="number" name="na" placeholder="Enter NA classes" required>
+</div>
+
+<button type="submit">Calculate Attendance</button>
+
+</form>
+{% if attendance %}
+
+<div class="result">
+
+<h2>{{ attendance }}%</h2>
+
+<p class="{{ status }}">
+    {{ message }}
+</p>
+
+<div class="progress">
+
+{% if attendance >= 75 %}
+<div class="progress-bar" style="width: {{ attendance }}%"></div>
+{% else %}
+<div class="progress-bar low" style="width: {{ attendance }}%"></div>
+{% endif %}
+
+</div>
+
+</div>
+
+{% endif %}
+
+<div class="footer">
+Flask Powered Attendance System 🚀
+</div>
+
+<div class="center glow-text">
+    Developed by Sai Chandra
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
